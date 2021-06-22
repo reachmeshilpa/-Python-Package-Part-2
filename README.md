@@ -1,5 +1,5 @@
 # -Python-Package-Part-2
-Learning by Implementation
+Learning by Implementation: Data Types: Numerical | Boolean | Dictionary
 # Data types in Python: the kind of or the type of value assigned to a variable/object
 '''
   Numerical
@@ -31,6 +31,37 @@ OUTPUT -> Is (100+20j) type of class complex? True
 One must know the key to retrieve the value.
 Used to retrieve data from a huge repository.
 
+# to know the length or number of keys in a dictionary variable
+baking = {1:'brownies', 'quiche':'4', 'cookies':'24'}
+**print (len(baking))**
+OUTPUT-> 3
+
+# to list all the keys in a dictionary variable
+print (dictnry variable.keys())
+baking = {1:'brownies', 'quiche':'4', 'cookies':'24'}
+**print (baking.keys())**
+OUTPUT-> dict_keys([1, 'quiche', 'cookies'])
+
+# to list all the values in a dictionary variable
+print (dictnry variable.values())
+baking = {1:'brownies', 'quiche':'4', 'cookies':'24'}
+**print (baking.values())**
+OUTPUT-> dict_values(['brownies', '4', '24'])
+
+# to list all the items in a dictionary variable
+print (dictnry variable.values())
+baking = {1:'brownies', 'quiche':'4', 'cookies':'24'}
+**print (baking.items())**
+OUTPUT->dict_items([(1, 'brownies'), ('quiche', '4'), ('cookies', '24')])
+
+# 2nd way to list all the items in a dictionary variable but in a COLUMN format
+baking = {1:'brownies', 'quiche':'4', 'cookies':'24'}
+for key,value in student.items():
+print (key,value)
+OUTPUT -> ?????NW
+
+
+
 # variable = { 'key':'value' }          used curly braces for the key and value while creating a variable, k and v separated by colon and placed in quotes
 dictnry1 = {'key1':'value1', 'key2':'value2'}
 
@@ -53,3 +84,39 @@ OUTPUT -> value1
   variable ['key'] = newvalue
   print (variable)
   
+  # 2nd way to update a value, need to use CURLY braces here within curved braces
+  variable.update ({'key':'replaced value'})
+  baking.update ({1:'brownies', 'quiche':'4', 'cookies':'24'})
+  print (baking)
+  Previous output before the update--> {1: 'cupcakes', 'quiche': '12', 'cookies': '24'}
+  OUTPUT -> {1: 'brownies', 'quiche': '4', 'cookies': '24'}
+  
+  
+  # key can be a number as well
+  baking = {1:'cupcakes', 'quiche':'12', 'cookies':'24'}
+  print (baking[1])
+  
+  # Consider I deleted an element and want to show 'none' for it, will use variable.get
+del (baking ['cookies'])
+print (baking ('cookies'))
+OUTPUT: Traceback and type errorr
+#But
+print (baking.get('cookies'))
+OUTPUT -> None
+
+# None was by default, if I instead want to write something and print that say 'Not found'
+print (baking.get('deleted key','what i want to print'))
+print (baking.get('cookies','Not found'))
+OUTPUT -> Not found
+
+# To retrieve the key of a deleted element into a new variable and to also print the value of the deleted variable as an output
+baking = {1:'brownies', 'quiche':'4', 'cookies':'24'}
+key to be deleted as a new variable = dictnry variable.pop ('key to be deleted')
+quiche = baking.pop('quiche')
+print (baking)
+OUTPUT-> {1: 'brownies', 'cookies': '24'}
+print (quiche)
+OUTPUT-> 4
+
+
+
