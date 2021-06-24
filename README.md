@@ -27,6 +27,51 @@ print (type (num1, num2, num3))
 print (‘ Is ’, data3, ‘type of class complex?’, isinstance (data3, complex))
 OUTPUT -> Is (100+20j) type of class complex? True
 
+#---------------------------
+BOOLEAN: True False
+age = 20
+if age> 19:
+  print ('Adult')
+elif age> 12:
+  print ('Teen')
+else:
+print ('Child')
+OUTPUT-> Adult
+
+# Nested if statements
+# if...elif....else within any number of if...elif.....else (avoid as it can be confusing)
+# indentation is the only way to figure out the level of nesting.
+age = 12
+if age >= 13:
+    if age<=19:
+        print('Teen')
+    else: 
+        print('Adult')
+else:
+    print('Child')
+OUTPUT-> Child
+
+# Combining operatore in if else...
+age = 20
+if (age>=13) and (age<=19):
+    person_type = 'Teen'
+elif (age>=0) and (age<=12):
+    person_type = 'Child'
+else:
+    person_type = 'Adult'
+  print ('The person is in category:{}'.format(person_type))
+                                      -----------------------
+  OUTPUT-> The person is in category: Adult
+
+# While loop in Python
+used to **iterate over a block of code** 
+as long as the test expression/test condition is **true.**
+
+
+#---------------------------
+
+
+#----------------------------
 # {Dictionary} is an unordered collection of key-value pairs.
 One must know the key to retrieve the value.
 Used to retrieve data from a huge repository.
@@ -108,7 +153,8 @@ OUTPUT -> None
 print (baking.get('deleted key','what i want to print'))
 print (baking.get('cookies','Not found'))
 OUTPUT -> Not found
-
+# DICTIONARY
+#------------------------------
 # To retrieve the key of a deleted element into a new variable and to also print the value of the deleted variable as an output
 baking = {1:'brownies', 'quiche':'4', 'cookies':'24'}
 key to be deleted as a new variable = dictnry variable.pop ('key to be deleted')
